@@ -1,0 +1,9 @@
+{
+  "name": "cardio-congress-updater",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "date-fns": "^4.1.0"
+  }
+}
