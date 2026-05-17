@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cardiologische congressen</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Cardiologische congressen</h1>
+        <p id="updated">Data laden…</p>
+      </div>
+      <div class="header-actions">
+        <button id="settingsBtn" type="button">GitHub instellen</button>
+        <button id="addBtn" type="button">+ Congres toevoegen</button>
+      </div>
+    </header>
+
+    <section class="controls" aria-label="Filters">
+      <input id="search" type="search" placeholder="Zoek congres, stad…" />
+      <select id="yearFilter">
+        <option value="">Alle jaren</option>
+      </select>
+      <button id="refreshBtn" type="button">Vernieuwen</button>
+    </section>
+
+    <p id="status" class="status" aria-live="polite"></p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Jaar</th>
+            <th>Congres</th>
+            <th>Stad</th>
+            <th>Data</th>
+            <th>Abstract deadline</th>
+            <th>Bron</th>
+            <th>Notities</th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <dialog id="dialog">
+    <form id="congressForm">
+      <h2>Congres toevoegen</h2>
+      <label>Jaar <input name="year" type="number" min="2024" max="2100" required /></label>
+      <label>Congres <input name="name" required /></label>
+      <label>Stad <input name="city" /></label>
+      <label>Startdatum <input name="startDate" type="date" /></label>
+      <label>Einddatum <input name="endDate" type="date" /></label>
+      <label>Abstract deadline <input name="abstractDeadline" type="date" /></label>
+      <label>Bron-URL <input name="sourceUrl" type="url" /></label>
+      <label>Notities <textarea name="notes" rows="3"></textarea></label>
+      <menu>
+        <button value="cancel" type="button" id="cancelBtn">Annuleren</button>
+        <button value="default" type="submit">Opslaan in GitHub</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <dialog id="settingsDialog">
+    <form id="settingsForm">
+      <h2>GitHub-instellingen</h2>
+      <p class="hint">Deze gegevens worden alleen in deze browser bewaard. Het token is nodig om nieuwe congressen als commit op GitHub op te slaan.</p>
+      <label>GitHub eigenaar / organisatie <input name="owner" placeholder="bv. gevaertlab" required /></label>
+      <label>Repository <input name="repo" placeholder="bv. cardio-congress-app" required /></label>
+      <label>Branch <input name="branch" value="main" required /></label>
+      <label>Databestand <input name="path" value="data/congresses.json" required /></label>
+      <label>GitHub fine-grained token <input name="token" type="password" autocomplete="off" required /></label>
+      <menu>
+        <button value="cancel" type="button" id="settingsCancelBtn">Annuleren</button>
+        <button value="default" type="submit">Instellingen bewaren</button>
+      </menu>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
