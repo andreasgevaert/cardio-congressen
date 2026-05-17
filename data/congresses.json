@@ -168,5 +168,45 @@
     "abstractDeadline": "",
     "sourceUrl": "https://www.escardio.org/events/congresses/eacvi-congress",
     "notes": ""
+  },
+  {
+  "year": 2027,
+  "name": "ESC Digital & AI Summit",
+  "city": "",
+  "startDate": "",
+  "endDate": "",
+  "abstractDeadline": "",
+  "sourceUrl": "https://www.escardio.org/Congresses-Events/ESC-Digital-Summit",
+  "notes": ""
+  },
+  {
+  "year": 2027,
+  "name": "EHRA Congress",
+  "city": "",
+  "startDate": "",
+  "endDate": "",
+  "abstractDeadline": "",
+  "sourceUrl": "https://www.escardio.org/Congresses-Events/EHRA-Congress",
+  "notes": ""
+  },
+  {
+  "year": 2027,
+  "name": "ESC Myocardial & Pericardial Diseases",
+  "city": "",
+  "startDate": "",
+  "endDate": "",
+  "abstractDeadline": "",
+  "sourceUrl": "https://www.escardio.org/Congresses-Events/Myocardial-and-Pericardial-Diseases",
+  "notes": ""
+  },
+  {
+  "year": 2027,
+  "name": "Belgian Society of Cardiology Annual Congress",
+  "city": "",
+  "startDate": "",
+  "endDate": "",
+  "abstractDeadline": "",
+  "sourceUrl": "https://www.belgianheart.be",
+  "notes": ""
   }
 ]
