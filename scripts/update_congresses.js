@@ -2,7 +2,15 @@
 // Fully reliable abstract extraction usually needs one parser per society website.
 // Add society-specific parsers below as URLs change.
 
-const fs = require("node:fs/promises");
+import fs from "node:fs/promises";
+
+import { parseESC } from "./parsers/esc.js";
+import { parseAHA } from "./parsers/aha.js";
+import { parseACC } from "./parsers/acc.js";
+import { parseHFSA } from "./parsers/hfsa.js";
+import { parseASE } from "./parsers/ase.js";
+import { parseISHLT } from "./parsers/ishlt.js";
+import { parseBSC } from "./parsers/bsc.js";
 
 const DATA_FILE = "data/congresses.json";
 
