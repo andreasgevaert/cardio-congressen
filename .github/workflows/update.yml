@@ -8,20 +8,28 @@ on:
 permissions:
   contents: write
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js 24
+        uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: npm
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - run: node scripts/update_congresses.js
+      - name: Run congress updater
+        run: node scripts/update_congresses.js
 
       - name: Commit updated data
         uses: stefanzweifel/git-auto-commit-action@v5
